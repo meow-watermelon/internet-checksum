@@ -60,8 +60,9 @@ if __name__ == '__main__':
             computes_inner.append(final_full_length_input_digits_inner[17:])
 
             data_sum = sum_bits(computes_inner).zfill(16)
+        else:
+            data_sum = data_sum.zfill(16)
 
-        data_sum = data_sum.zfill(16)
         final_checksum = flip_bits(data_sum)
 
         print('Input Digits: %s' %(input_digits))
